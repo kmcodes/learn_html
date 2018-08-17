@@ -9,15 +9,61 @@ body, html {
     background-repeat: no-repeat;
     background-size:cover;
     display:grid;
-    display: grid;
     height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-columns: 5.5fr 3.38fr 5.5fr;
+    grid-template-rows: 1fr 3.125fr 3fr;
     grid-gap: 1px 1px;
     grid-template-areas: ". . ." ". asset ." ". . .";
 }
 
-.asset { 
+.asset {
     grid-area: asset;
-    background-color: white; }
+    background-color: white;
+    display:grid;
+    grid-template-rows: 1fr .55fr .55fr .55fr .48fr;
+    height:100%;
+    grid-gap:1px 1px;
+    grid-template-areas: "pay""visa""mcard""maestro""next";
+    font-family: Roboto;
+    align-items: center;
+    justify-content: center;
+}
 
+.pay{
+    grid-area: pay;
+}
+
+.text{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.visa{
+    grid-area: visa;
+}
+.mcard{
+    grid-area: mcard;
+}
+.maestro{
+    grid-area: maestro;
+}
+.next{
+    grid-area: next;
+}
+
+.dot{
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dark{
+    background-color: rgba(0,0,0,0.6);
+}
+.mid{
+    background-color: rgba(0,0,0,0.4);
+}
+.light{
+    background-color: rgba(0,0,0,0.2);
+}
